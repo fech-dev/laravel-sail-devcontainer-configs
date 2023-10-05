@@ -1,0 +1,30 @@
+// https://aka.ms/devcontainer.json
+{
+	"name": "Laravel App",
+	"dockerComposeFile": [
+		"../docker-compose.yml"
+	],
+	"service": "laravel.test",
+	"workspaceFolder": "/var/www/html",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"mikestead.dotenv",
+				"amiralizadeh9480.laravel-extra-intellisense",
+				"DEVSENSE.phptools-vscode",
+				"neilbrayfield.php-docblocker",
+    		    "zobo.php-intellisense",
+    		    "ctf0.php-namespace-resolver",
+    		    "onecentlin.laravel-extension-pack",
+    		    "junstyle.php-cs-fixer",
+                "tinkerun.tinkerun-vscode"
+			],
+			"settings": {}
+		}
+	},
+	"remoteUser": "sail",
+	"postCreateCommand": "chown -R 1000:1000 /var/www/html"
+	// "forwardPorts": [],
+	// "runServices": [],
+	// "shutdownAction": "none",
+}
